@@ -2,8 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentRight="true">
 
     <ImageView
         android:id="@+id/ivPoster"
@@ -11,27 +15,36 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
+        android:layout_gravity="center_vertical"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="268dp"
-        android:layout_height="51dp"
+        android:transitionName="information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="5dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="0dp"
         android:layout_toEndOf="@+id/ivPoster"
-        android:text="TextView" />
+        android:gravity="left"
+        android:text="TextView"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/tvOverview"
-        android:layout_width="202dp"
-        android:layout_height="95dp"
+        android:transitionName="description"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
         android:layout_below="@+id/tvTitle"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="5dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="0dp"
         android:layout_toEndOf="@+id/ivPoster"
+        android:gravity="left"
         android:text="TextView" />
+
 </RelativeLayout>
